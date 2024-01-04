@@ -6,12 +6,13 @@ Displays keypresses on screen on supported Wayland compositors (requires
 ![](https://sr.ht/xGs2.png)
 
 Originally Forked from https://git.sr.ht/~sircmpwn/wshowkeys as Drew has moved onto other things.
+
 This fork is from https://github.com/ammgws/wshowkeys and contains small improvements such as unicode icons, and readability improvements
 
 ## Known issues / Issues to be aware of prior to usage
 
-Delete is shown as a missing unicode.
-The first PgUp / PgDown not having a space after normal typing
+- Delete is shown as a missing unicode.
+- The first PgUp / PgDown not having a space after normal typing
 
 ## Installation
 
