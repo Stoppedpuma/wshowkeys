@@ -7,7 +7,7 @@ Displays keypresses on screen on supported Wayland compositors (requires
 
 Originally Forked from https://git.sr.ht/~sircmpwn/wshowkeys as Drew has moved onto other things.
 
-This fork is from https://github.com/ammgws/wshowkeys and contains small improvements such as unicode icons, and readability improvements
+This fork is from https://github.com/ammgws/wshowkeys and contains small improvements such as unicode icons, and readability improvements.
 
 ## Known issues / Issues to be aware of prior to usage
 
