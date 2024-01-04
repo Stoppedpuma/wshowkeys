@@ -12,7 +12,7 @@ This fork is from https://github.com/ammgws/wshowkeys and contains small improve
 ## Known issues / Issues to be aware of prior to usage
 
 - Delete is shown as a missing unicode.
-- The first PgUp / PgDown not having a space after normal typing
+- The first special character not having a space after regular characters.
 
 ## Installation
 
