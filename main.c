@@ -109,7 +109,43 @@ static void render_to_cairo(cairo_t *cairo, struct wsk_state *state,
 		if (!name[0]) {
 			special = true;
 			cairo_set_source_u32(cairo, state->specialfg);
-			name = key->name;
+			if (strcmp(key->name, "space") == 0) {
+					name = " ⎵";
+			} else if (strcmp(key->name, "Control_L") == 0) {
+				name = "Ctrl";
+			} else if (strcmp(key->name, "Control_R") == 0) {
+				name = "Ctrl";
+			} else if (strcmp(key->name, "Super_L") == 0) {
+				name = "Super";
+			} else if (strcmp(key->name, "Alt_L") == 0) {
+				name = "Alt";
+			} else if (strcmp(key->name, "Alt_R") == 0) {
+				name = "Alt";
+			} else if (strcmp(key->name, "Shift_L") == 0) {
+				name = "⇧";
+			} else if (strcmp(key->name, "Shift_R") == 0) {
+				name = "⇧";
+			} else if (strcmp(key->name, "Return") == 0) {
+				name = "↩";
+			} else if (strcmp(key->name, "BackSpace") == 0) {
+				name = "⌫";
+			} else if (strcmp(key->name, "Escape") == 0) {
+				name = "⎋";
+			} else if (strcmp(key->name, "Up") == 0) {
+				name = "↑";
+			} else if (strcmp(key->name, "Down") == 0) {
+				name = "↓";
+			} else if (strcmp(key->name, "Left") == 0) {
+				name = "←";
+			} else if (strcmp(key->name, "Right") == 0) {
+				name = "→";
+			} else if (strcmp(key->name, "Next") == 0) {
+				name = "PgDown";
+			} else if (strcmp(key->name, "Prior") == 0) {
+				name = "PgUp";
+			} else {
+				name=key->name;
+			}
 		} else {
 			cairo_set_source_u32(cairo, state->foreground);
 		}
@@ -118,8 +154,8 @@ static void render_to_cairo(cairo_t *cairo, struct wsk_state *state,
 
 		int w, h;
 		if (special) {
-			get_text_size(cairo, state->font, &w, &h, NULL, scale, "%s+", name);
-			pango_printf(cairo, state->font, scale,  "%s+", name);
+			get_text_size(cairo, state->font, &w, &h, NULL, scale, "%s ", name);
+			pango_printf(cairo, state->font, scale,  "%s ", name);
 		} else {
 			get_text_size(cairo, state->font, &w, &h, NULL, scale, "%s", name);
 			pango_printf(cairo, state->font, scale,  "%s", name);
